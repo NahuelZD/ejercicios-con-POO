@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas con POO</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1>Ejercicios JavaScript</h1>
+        <h4>Prácticas con POO</h4>
+    </div>
+    <p>Crear objetos</p>
+    <div class="box" id="eje1">
+        <p>1- Crea un objeto llamado auto que tenga algunas características como el color,
+            marca, modelo y si está encendido o apagado. Crea los métodos necesarios para
+            permitir encender y apagar el auto.
+        </p>
+        <p class="dificultad">
+            Dificultad: 🔵
+        </p>
+        <button type="button" onclick="{auto.onOff()}">Encender/Apagar</button>
+    </div>
+    <p>Modelando Clases</p>
+    <div class="box" id="eje2">
+        <p>
+            2-Escribe un programa que cree un objeto "cuenta" con las siguientes propiedades:
+        </p>
+        <ul>
+            <li>Una propiedad titular con el valor "Alex".</li>
+            <li>Una propiedad saldo, teniendo como valor inicial 0.</li>
+            <li>Un método ingresar() que permita añadir dinero a la cuenta, pasando la
+                cantidad como parámetro.</li>
+            <li>Un método extraer() que permita retirar la cantidad pasada como
+                parámetro.</li>
+            <li>Un método informar() que retorne la información del estado de la cuenta.</li>
+        </ul>
+        <p>
+            Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y volver a
+            mostrar la descripción del estado de la cuenta.
+        </p>
+        <p class="dificultad">Cuenta bancaria - Dificultad: ⚪🔵</p>
+        <label for="transaccion">Ingresá un valor: </label>
+        <input type="text" id="transaccion">
+        <button type="button" onclick="cuenta.obtenerValorIngreso()">Ingresar Dinero</button>
+        <button type="button" onclick="cuenta.obtenerValorExtraccion()">Extraer Dinero</button>
+        <button type="button" onclick="cuenta.informar()">Informar</button>
+    </div>
+    <p>Rectángulos</p>
+    <div class="box" id="eje3">
+        <p>
+            3-Escribe una clase que permita crear distintos objetos “rectángulos”, con las
+            propiedades de alto y ancho, mas los métodos necesarios para modificar y
+            mostrar sus propiedades, calcular el perímetro y el área
+        </p>
+        <p class="dificultad">Dificultad - 🔵</p>
+        <label for="alturaRectangulo">Ingresar parámetros</label>
+        <button type="button" onclick="obtenerRectangulo()">Enviar</button>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
