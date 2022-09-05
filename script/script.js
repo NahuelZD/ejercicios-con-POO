@@ -25,7 +25,7 @@ let cuenta = {
   ingresar: function (cantidad,dia) {
     this.saldo += cantidad;
     alert(`Ingresaste $${cantidad} a tu cuenta bancaria. ${dia}`);
-    this.ingresos.push(dia)
+    this.ingresos.push([dia, cantidad])
   },
   extraer: function (cantidad,dia) {
     if (cantidad > this.saldo)
@@ -33,7 +33,7 @@ let cuenta = {
     else {
       alert(`Sacaste $${cantidad} de tu cuenta bancaria. ${dia}`);
       this.saldo -= cantidad;
-      this.extraciones.push(dia);
+      this.extraciones.push([dia, cantidad]);
     }
   },
   informar: function () {
