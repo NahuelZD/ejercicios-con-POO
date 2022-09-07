@@ -22,12 +22,12 @@ let cuenta = {
   saldo: 0,
   ingresos: [],
   extraciones: [],
-  ingresar: function (cantidad,dia) {
+  ingresar: function (cantidad, dia) {
     this.saldo += cantidad;
     alert(`Ingresaste $${cantidad} a tu cuenta bancaria. ${dia}`);
-    this.ingresos.push([dia, cantidad])
+    this.ingresos.push([dia, cantidad]);
   },
-  extraer: function (cantidad,dia) {
+  extraer: function (cantidad, dia) {
     if (cantidad > this.saldo)
       alert("Fondos insuficientes para hacer la extracción.");
     else {
@@ -45,17 +45,37 @@ let cuenta = {
   },
   obtenerValorIngreso: function () {
     let dineroIngresado = Number(document.getElementById("transaccion").value);
-    let d = new Date;
-    let date = d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " +
-    d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-    this.ingresar(dineroIngresado,date);
+    let d = new Date();
+    let date =
+      d.getDate() +
+      "-" +
+      (d.getMonth() + 1) +
+      "-" +
+      d.getFullYear() +
+      " " +
+      d.getHours() +
+      ":" +
+      d.getMinutes() +
+      ":" +
+      d.getSeconds();
+    this.ingresar(dineroIngresado, date);
   },
   obtenerValorExtraccion: function () {
     let dineroExtraido = Number(document.getElementById("transaccion").value);
-    let d = new Date;
-    let date = d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " +
-    d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-    this.extraer(dineroExtraido,date);
+    let d = new Date();
+    let date =
+      d.getDate() +
+      "-" +
+      (d.getMonth() + 1) +
+      "-" +
+      d.getFullYear() +
+      " " +
+      d.getHours() +
+      ":" +
+      d.getMinutes() +
+      ":" +
+      d.getSeconds();
+    this.extraer(dineroExtraido, date);
   },
 };
 
@@ -82,3 +102,62 @@ function obtenerRectangulo() {
   console.log(rectangulo1.mostrarProp());
   console.log(rectangulo1.calcArea());
 }
+
+// Ejercicio 4
+let articulos = {
+  productos: [],
+
+  Creacion: function (codigo, nombre, precio) {
+    this.codigo = codigo;
+    this.nombre = nombre;
+    this.price = precio;
+  },
+
+  agregarProducto: function () {
+    let cod = document.getElementById("codigo").value;
+    let name = document.getElementById("nombre").value;
+    let price = document.getElementById("precio").value;
+    let newArticle = new this.Creacion(cod, name, price);
+    this.productos.push(newArticle);
+  },
+
+  imprimeDatos: function(){
+    console.log(this.productos)
+  }
+};
+
+/* class Producto {
+  constructor(codigo,nombre,precio){
+    this.codigo = codigo;
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+  imprimeDatos(){
+    console.log(`Producto: ${this.nombre} - Código: ${this.codigo} - Precio: $${this.precio}`);
+  }
+}
+
+function agregarProducto(){
+  let stock = [];
+  let cod = document.getElementById('codigo').value;
+  let name = document.getElementById('nombre').value;
+  let price = document.getElementById('precio').value;
+
+  console.log(cod)
+  console.log(name)
+  console.log(price)
+
+  const articulo = new Producto(cod,name,price);
+
+  console.log(articulo)
+
+  stock.push(articulo)
+
+  console.log(stock)
+}
+
+let fideos = new Producto(101520, 'Arroz largo fino', 80);
+let carne = new Producto(101522, 'Bola de lomo', 1200);
+let manteca = new Producto(101530, 'Manteca x 200 g', 380);
+
+console.log(fideos.imprimeDatos()) */

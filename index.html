@@ -61,6 +61,29 @@
         <label for="alturaRectangulo">Ingresar parámetros</label>
         <button type="button" onclick="obtenerRectangulo()">Enviar</button>
     </div>
+    <p>Productos</p>
+    <div class="box" id="eje4">
+        <p>
+            4- Escribe una clase Producto para crear objetos. Estos objetos, deben presentar
+            las propiedades código, nombre y precio, además del método imprime datos, el
+            cual escribe por pantalla los valores de sus propiedades.
+        </p>
+        <p>
+            Posteriormente, cree tres instancias de este objeto y guárdalas en un array.
+            Por último, utilice el método imprime datos para mostrar por pantalla los valores
+            de los tres objetos instanciados.
+        </p>
+        <p class="dificultad">
+            Producto - Dificultad: ⚪🔵
+        </p>
+        <div class="formBox">
+            <input type="text" id="codigo" placeholder="Código">
+            <input type="text" id="nombre" placeholder="Nombre del producto">
+            <input type="number" id="precio" placeholder="Precio">
+            <button type="button" onclick="{articulos.agregarProducto()}">Agregar</button>
+            <button type="button" onclick="{articulos.imprimeDatos()}">Mostrar Productos</button>
+        </div>
+    </div>
 
     <script src="./script/script.js"></script>
 </body>
