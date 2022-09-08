@@ -14,3 +14,8 @@
 .dificultad{
     text-align: end;
 }
+
+img{
+    display: flex;
+    margin: auto;
+}

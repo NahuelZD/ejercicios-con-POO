@@ -84,6 +84,91 @@
             <button type="button" onclick="{articulos.imprimeDatos()}">Mostrar Productos</button>
         </div>
     </div>
+    <p>Persona</p>
+    <div class="box" id="eje4">
+        <p>
+            5- Crea una clase llamada Persona que siga las siguientes condiciones:
+            Sus propiedades son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura,
+            año de nacimiento. Si quieres añadir alguna propiedad extra puedes hacerlo.
+        </p>
+        <p>
+            Los métodos que se debe poder utilizar son:
+            mostrarGeneracion: este método debe mostrar un mensaje indicando a qué
+            generación pertenece la persona creada y cual es el rasgo característico de esta
+            generación.
+        </p>
+        <p>
+            Para realizar este método tener en cuenta la siguiente tabla de generaciones:
+        </p>
+        <ul>
+            <li>esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la
+                persona es mayor de edad.</li>
+            <li>mostrarDatos: devuelve toda la información del objeto.</li>
+            <li>generaDNI(): genera un número aleatorio de 8 cifras.</li>
+        </ul>
+        <p class="dificultad">Dificultad: ⚪🔵🔴</p>
+        <img src="/assets/taxonomia.png" alt="">
+    </div>
+    <p>Libros</p>
+    <div class="box" id="eje6">
+        <p>
+            6- Crear una clase Libro que contenga al menos las siguientes propiedades:
+        </p>
+        <ul>
+            <li>ISBN</li>
+            <li>Título</li>
+            <li>Autor</li>
+            <li>Número de páginas</li>
+        </ul>
+        <p>
+            Crear sus respectivos métodos get y set correspondientes para cada propiedad.
+            Crear el método mostrarLibro() para mostrar la información relativa al libro con el
+            siguiente formato:
+        </p>
+        <p>
+            “El libro xxx con ISBN xxx creado por el autor xxx tiene páginas xxx”
+        </p>
+        <p>
+            Crear al menos 2 objetos libros y utilizar el método mostrarLibro();
+            Por último, indicar cuál de los 2 objetos “libros” tiene más páginas.
+        </p>
+        <p class="dificultad">
+            Libros - Dificultad: ⚪🔵🔴
+        </p>
+    </div>
+    <p>Agenda Telefónica</p>
+    <div class="box" id="eje7">
+        <p>
+            7- Nos piden realizar una agenda telefónica de contactos.
+        </p>
+        <p>
+            Un contacto está definido por un nombre y un teléfono. Se considera que un
+            contacto es igual a otro cuando sus nombres son iguales.
+        </p>
+        <p>
+            Una agenda de contactos está formada por un conjunto de contactos. Se podrá
+            crear de dos formas, indicando nosotros el tamaño o con un tamaño por defecto
+            (10).
+        </p>
+        <p>
+            Los métodos de la agenda serán los siguientes:
+        </p>
+        <ul>
+            <li> aniadirContacto(Contacto): Añade un contacto a la agenda, sino la agenda
+            no puede almacenar más contactos indicar por pantalla.</li>
+            <li>existeContacto(Conctacto): indica si el contacto pasado existe o no.</li>
+            <li> listarContactos(): Lista toda la agenda
+            </li>
+            <li>buscarContacto(nombre): busca un contacto por su nombre y muestra su
+            teléfono.</li>
+            <li> eliminarContacto(Contacto c): elimina el contacto de la agenda, indica si se
+            ha eliminado o no por pantalla</li>
+            <li>gendaLlena(): indica si la agenda está llena.
+            </li>
+            <li>huecosLibres(): indica cuántos contactos más podemos ingresar.</li>
+        </ul>
+        <p class="dificultad">Agenda telefónica - Dificultad: ⚪🔵🔴</p>
+    </div>
 
     <script src="./script/script.js"></script>
 </body>
