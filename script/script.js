@@ -286,3 +286,64 @@ persona3.mostrarDatos()
 persona1.generarDNI()
 
 console.log(persona1.dni)
+
+// Ejercicio 6
+
+class Libro{
+  constructor(isbn, titulo, autor, paginas){
+    this._isbn = isbn;
+    this._titulo = titulo;
+    this._autor = autor;
+    this._paginas = paginas;
+  }
+
+  get isbn(){
+    return this._isbn;
+  }
+  set isbn(nuevoIsbn){
+    if(isNaN(nuevoIsbn)) console.log('Error!')
+    else this._isbn = nuevoIsbn;
+  }
+
+  get titulo(){
+    return this._titulo;
+  }
+  set titulo(nuevoTitulo){
+    const palabras = nuevoTitulo.split(' ');
+    let flag = false;
+    palabras.forEach(palabra => {
+      if(palabra === 'puto' || palabra == 'puta') flag = true;
+    })
+    flag ? console.log('Error') : this._titulo = nuevoTitulo;
+  }
+
+  get autor(){
+    return this._autor;
+  }
+  // Comento el set para que el autor sea solo "READ ONLY" y no se pueda modificar.
+/*   set autor(nuevoAutor){
+    if(nuevoAutor == undefined || nuevoAutor == '') this._autor = 'Anonimo';
+  } */
+
+  get paginas(){
+    return this._paginas;
+  }
+
+  mostrarLibro(){
+    console.log(`El libro "${this.titulo}" con ISBN: ${this.isbn}, creado por el autor '${this.autor}', tiene ${this.paginas} páginas`)
+  }
+}
+
+
+
+const libro1 = new Libro(123456789,'Hola, Argentina','Nahuel Zelaya', 1234)
+const libro2 = new Libro(987654321, 'Chau, Mundo', 'José Lencina', 4564);
+
+// Activa SET
+libro2.titulo = 'La puta madre'
+libro2.autor = ''
+libro2.paginas = 1
+
+// Activa GET
+console.log(libro2)
+libro2.mostrarLibro()
